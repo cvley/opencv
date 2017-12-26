@@ -279,6 +279,9 @@ bool  Jpeg2KDecoder::readData( Mat& img )
     }
 #endif
 
+	img.quality = CV_DEFAULT_QUALITY;
+	img.format = "JPEG2000";
+
     return result;
 }
 

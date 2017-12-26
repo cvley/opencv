@@ -378,6 +378,9 @@ bad_decoding_end:
     {
     }
 
+	img.quality = CV_DEFAULT_QUALITY;
+	img.format = "SUNRAS";
+
     return result;
 }
 

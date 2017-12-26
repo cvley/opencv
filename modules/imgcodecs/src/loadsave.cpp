@@ -137,6 +137,10 @@ struct ImageCodecInitializer
         decoders.push_back( makePtr<JpegDecoder>() );
         encoders.push_back( makePtr<JpegEncoder>() );
     #endif
+    #ifdef HAVE_GIF
+        decoders.push_back( makePtr<GifDecoder>() );
+        encoders.push_back( makePtr<GifEncoder>() );
+    #endif
     #ifdef HAVE_WEBP
         decoders.push_back( makePtr<WebPDecoder>() );
         encoders.push_back( makePtr<WebPEncoder>() );

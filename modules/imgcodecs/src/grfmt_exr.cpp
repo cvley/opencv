@@ -384,6 +384,9 @@ bool  ExrDecoder::readData( Mat& img )
 
     close();
 
+	img.format = "EXR";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return result;
 }
 

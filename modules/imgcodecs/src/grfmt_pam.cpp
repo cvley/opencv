@@ -616,6 +616,9 @@ bool  PAMDecoder::readData( Mat& img )
     {
     }
 
+	img.quality = CV_DEFAULT_QUALITY;
+	img.format = "PAM";
+
     return res;
 }
 

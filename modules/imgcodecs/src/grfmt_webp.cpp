@@ -195,6 +195,9 @@ bool WebPDecoder::readData(Mat &img)
         }
     }
 
+	img.format = "WEBP";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return false;
 }
 

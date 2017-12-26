@@ -47,6 +47,28 @@ if(WITH_JPEG)
   set(HAVE_JPEG YES)
 endif()
 
+# --- giflib (optional) ---
+if(WITH_GIF)
+  if(BUILD_GIF)
+    ocv_clear_vars(GIF_FOUND)
+  else()
+    include(FindGIF)
+  endif()
+
+  if(NOT GIF_FOUND)
+    ocv_clear_vars(GIF_LIBRARY GIF_LIBRARIES GIF_INCLUDE_DIR)
+
+    set(GIF_LIBRARY libgif)
+    set(GIF_LIBRARIES ${GIF_LIBRARY})
+#    add_subdirectory("${OpenCV_SOURCE_DIR}/3rdparty/libjpeg")
+    set(GIF_INCLUDE_DIR "${${GIF_LIBRARY}_SOURCE_DIR}")
+  endif()
+
+  ocv_parse_header("${GIF_INCLUDE_DIR}/gif_lib.h" GIF_VERSION_LINES GIF_LIB_VERSION)
+  set(HAVE_GIF YES)
+endif()
+
+
 # --- libtiff (optional, should be searched after zlib and libjpeg) ---
 if(WITH_TIFF)
   if(BUILD_TIFF)

@@ -222,6 +222,7 @@ OCV_OPTION(WITH_IPP            "Include Intel IPP support"                   (NO
 OCV_OPTION(WITH_HALIDE         "Include Halide support"                      OFF)
 OCV_OPTION(WITH_JASPER         "Include JPEG2K support"                      ON   IF (NOT IOS) )
 OCV_OPTION(WITH_JPEG           "Include JPEG support"                        ON)
+OCV_OPTION(WITH_GIF            "Include GIF support"                        ON)
 OCV_OPTION(WITH_WEBP           "Include WebP support"                        ON   IF (NOT WINRT) )
 OCV_OPTION(WITH_OPENEXR        "Include ILM support via OpenEXR"             ON   IF (NOT IOS AND NOT WINRT) )
 OCV_OPTION(WITH_OPENGL         "Include OpenGL support"                      OFF  IF (NOT ANDROID AND NOT WINRT) )
@@ -1122,6 +1123,10 @@ status("    ZLib:"   ZLIB_FOUND THEN "${ZLIB_LIBRARIES} (ver ${ZLIB_VERSION_STRI
 
 if(WITH_JPEG OR HAVE_JPEG)
   status("    JPEG:" JPEG_FOUND THEN "${JPEG_LIBRARY} (ver ${JPEG_LIB_VERSION})" ELSE "build (ver ${JPEG_LIB_VERSION})")
+endif()
+
+if(WITH_GIF OR HAVE_GIF)
+  status("    GIF:" GIF_FOUND THEN "${GIF_LIBRARY} (ver ${GIF_LIB_VERSION})" ELSE "build (ver ${GIF_LIB_VERSION})")
 endif()
 
 if(WITH_WEBP OR HAVE_WEBP)

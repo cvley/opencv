@@ -288,6 +288,9 @@ bool  PngDecoder::readData( Mat& img )
         }
     }
 
+	img.quality = CV_DEFAULT_QUALITY;
+	img.format = "PNG";
+
     close();
     return result;
 }

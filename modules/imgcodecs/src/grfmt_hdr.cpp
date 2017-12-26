@@ -96,6 +96,10 @@ bool HdrDecoder::readData(Mat& _img)
     } else {
         img.convertTo(_img, _img.type(), 255);
     }
+
+	_img.format = "HDR";
+	_img.quality = CV_DEFAULT_QUALITY;
+
     return true;
 }
 

@@ -58,6 +58,8 @@
 #include <ctype.h>
 #include <assert.h>
 
+#define CV_DEFAULT_QUALITY 100
+
 #if defined _WIN32 || defined WINCE
     #include <windows.h>
     #undef small

@@ -56,5 +56,6 @@
 #include "grfmt_gdal.hpp"
 #include "grfmt_gdcm.hpp"
 #include "grfmt_pam.hpp"
+#include "grfmt_gif.hpp"
 
 #endif/*_GRFMTS_H_*/

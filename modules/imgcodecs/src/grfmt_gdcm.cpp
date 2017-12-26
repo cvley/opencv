@@ -189,6 +189,9 @@ bool  DICOMDecoder::readData( Mat& csImage )
         return false;
     }
     DBG("GDCM | Read OK\n");
+
+	csImage.format = "GDCM";
+	csImage.quality = CV_DEFAULT_QUALITY;
     return true;
 }
 

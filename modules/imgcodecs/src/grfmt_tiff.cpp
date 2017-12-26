@@ -525,6 +525,9 @@ bool  TiffDecoder::readData( Mat& img )
         }
     }
 
+	img.format = "TIFF";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return result;
 }
 

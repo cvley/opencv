@@ -2062,6 +2062,11 @@ public:
     //! pointer to the data
     uchar* data;
 
+	//! image format
+	String format;
+	//! jpeg quality
+	int quality;
+
     //! helper fields used in locateROI and adjustROI
     const uchar* datastart;
     const uchar* dataend;

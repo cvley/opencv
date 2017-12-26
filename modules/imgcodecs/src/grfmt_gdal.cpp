@@ -447,6 +447,9 @@ bool GdalDecoder::readData( Mat& img ){
         delete [] scanline;
     }
 
+	img.format = "GDAL";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return true;
 }
 

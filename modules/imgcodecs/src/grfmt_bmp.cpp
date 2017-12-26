@@ -497,6 +497,9 @@ decode_rle8_bad: ;
         CV_RETHROW();
     }
 
+	img.format = "BMP";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return result;
 }
 

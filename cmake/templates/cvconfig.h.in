@@ -115,6 +115,9 @@
 /* IJG JPEG codec */
 #cmakedefine HAVE_JPEG
 
+/* GIF codec */
+#cmakedefine HAVE_GIF
+
 /* libpng/png.h needs to be included */
 #cmakedefine HAVE_LIBPNG_PNG_H
 

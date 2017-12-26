@@ -368,6 +368,9 @@ bool PxMDecoder::readData( Mat& img )
         CV_RETHROW();
     }
 
+	img.format = "PXM";
+	img.quality = CV_DEFAULT_QUALITY;
+
     return result;
 }
 
